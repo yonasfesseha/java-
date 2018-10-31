@@ -1,38 +1,53 @@
-//global variables 
-void setup()  {
-    size(500,600);
-  ellipse(width/2, height/2, width, width);
-ellipse(width/4, height/4, width/8, width/8);
-ellipse(width*3/4, height/4, width/8, width/8);
+//Global Variables
+color skin = #F8FAA9;
+color black = #0A0A0A;
+color orange= #DE7607;
+color blue=#392CB7;
+
+void setup() {
+ size(500, 600);
+ int faceX=width/2;
+int faceY=height/2;
+int lefteyeX=width/4;
+int lefteyeY=height/4;
+int righteyeX=3*width/4;
+int righteyeY=height/4;
+int eyediameter= width/8;
+ fill(yellow);
+  strokeWeight(1);  
+ellipse(faceX, faceY, width, width);
+fill(black);
+ strokeWeight(1); 
+ellipse(lefteyeX, lefteyeY, eyediameter, eyediameter);
+ellipse(righteyeX, righteyeY, eyediameter, eyediameter);
+fill(blue);
+strokeWeight(10);  // Thicker
 line(width/4, height*3/4, width*3/4, height*3/4);
-triangle(width*2/4, height*1/3, width*3/4, height*2/3, width*1/4, height*2/3);
-fill(#ff0407);
-ellipse(width*1/3, height*1/3, width*1/75, width*1/75);
-ellipse(width*1/3, height*1/2, width*1/75, width*1/75);
-ellipse(width*2/3, height*1/3, width*2/100, width*2/100);
-ellipse(width*2/3, height*2/3, width*1/100, width*1/100);
-  ellipse(random(width), random(height), width*1/75, width*1/75);
+fill(orange);
+ strokeWeight(1);  
+triangle(width/2,height/3,width*3/4,height*2/3,width/4,height*2/3);
 }
 
-
-void draw()
-{
-  fill(#ff0407);
-ellipse(width*1/3, height*1/3, width*1/75, width*1/75);
-ellipse(width*1/3, height*1/2, width*1/75, width*1/75);
-ellipse(width*2/3, height*1/3, width*2/100, width*2/100);
-ellipse(width*2/3, height*2/3, width*1/100, width*1/100);
-  ellipse(random(width), random(height), width*1/75, width*1/75);
- ellipse(random(width), random(height), width*1/75, width*1/75);
- fill(#FFFFFF); //WHITE
- triangle(width*2/4, height*1/3, width*3/4, height*2/3, width*1/4, height*2/3);
- fill(#FFFFFF); //WHITE
- line(width/4, height*3/4, width*3/4, height*3/4);
- fill(#FFFFFF); //WHITE
- ellipse(width/4, height/4, width/8, width/8);
-ellipse(width*3/4, height/4, width/8, width/8);
+void draw(){
+  fill(#F21853);
+  strokeWeight(1);  
+  
+ellipse(width/3,height/3,width/75,width/75);
+ellipse(width/3,height/2,width/75,width/75);
+  fill(#5F5658);
+ellipse(width/2,height/4,width/75,width/75);
+ellipse(width*3/4,height/2,width/50,width/50);
+ellipse(random(width),random(height),width/75,height/75);
+ellipse(random(width),random(height),width/75,height/75);
+fill(black);
+ellipse(width/4, height/4, width/8, width/8);
+ellipse(3*width/4, height/4, width/8, width/8);
+fill(#080807);
+line(width/4, height*3/4, width*3/4, height*3/4);
+fill(orange);
+triangle(width/2,height/3,width*3/4,height*2/3,width/4,height*2/3);
 }
- 
- 
- 
+void mouseClicked(){
+  quitbuttonmouseclicked();
+}
  
